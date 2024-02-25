@@ -22,10 +22,17 @@ const Login = () => {
   return (
     <div>
       <Header />
+      <div class="absolute inset-0 overflow-hidden">
+        <img
+          class="w-full h-full"
+          src="https://www.asterhospitals.in/sites/default/files/2022-03/best-organ-transplant-hospital-in-calicut.jpg"
+          alt="background"
+        />
+      </div>
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-3/12 p-10 bg-gray-600 my-22 mx-auto right-0 left-0 text-black rounded-lg bg-opacity-50"
+        className="relative w-3/12 p-10 bg-gray-300 my-22 mx-auto  text-black rounded-lg bg-opacity-50 mr-20"
       >
         <h1 className="font-bold text-2xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -59,7 +66,7 @@ const Login = () => {
         />
         <p className="text-red-600 font-bold text-lg py-2"> {errorMessage}</p>
         <button
-          className="p-2 my-5 bg-red-700 w-full rounded-lg"
+          className="p-2 my-5 bg-red-600 w-full rounded-lg"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
